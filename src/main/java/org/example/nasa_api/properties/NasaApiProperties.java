@@ -6,5 +6,5 @@ import org.springframework.validation.annotation.Validated;
 
 @Validated
 @ConfigurationProperties(prefix = "nasa-api")
-public record NasaApiProperties(@NotNull String apiKey, @NotNull String baseUrl, @NotNull String baseApodUrl) {
+public record NasaApiProperties(@NotNull String apiKey, @NotNull String baseUrl, @NotNull String baseApodUrl, @NotNull String baseNeowsUrl) {
 }
