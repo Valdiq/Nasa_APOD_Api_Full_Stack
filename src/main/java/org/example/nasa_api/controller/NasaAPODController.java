@@ -3,10 +3,7 @@ package org.example.nasa_api.controller;
 import lombok.RequiredArgsConstructor;
 import org.example.nasa_api.model.NasaAPOD;
 import org.example.nasa_api.service.NasaAPODService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -14,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/apod")
 @RequiredArgsConstructor
+@CrossOrigin("http://localhost:3000")
 public class NasaAPODController {
 
     private final NasaAPODService service;

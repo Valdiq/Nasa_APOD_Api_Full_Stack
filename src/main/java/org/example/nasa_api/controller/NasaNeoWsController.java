@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/neows")
 @RequiredArgsConstructor
+@CrossOrigin("http://localhost:3000")
 public class NasaNeoWsController {
 
     private final NasaNeoWsService service;
