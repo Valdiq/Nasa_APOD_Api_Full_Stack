@@ -9,18 +9,13 @@ function Apod() {
     const [apodData, setApodData] = useState(null);
     const [error, setError] = useState(null);
 
-    const formatDate = (dateStr) => {
-        if (!dateStr) return null;
-        return new Date(dateStr).toISOString().slice(0, 10);
-    };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         const params = {};
-        if (date) params.date = formatDate(date);
-        if (startDate) params.start_date = formatDate(startDate);
-        if (endDate) params.end_date = formatDate(endDate);
+        if (date) params.date = date;
+        if (startDate) params.start_date = startDate;
+        if (endDate) params.end_date = endDate;
         if (count) params.count = count;
 
         try {
